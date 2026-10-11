@@ -1,0 +1,35 @@
+# Dependencias
+node_modules/
+functions/node_modules/
+
+# Firebase: proyecto local, caché y registros de emuladores
+.firebaserc
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+database-debug.log*
+storage-debug.log*
+pubsub-debug.log*
+ui-debug.log*
+emulator-data/
+
+# Secretos y credenciales: NUNCA se versionan
+.env
+.env.*
+!.env.example
+functions/.env
+functions/.env.*
+*.local
+service-account*.json
+*-firebase-adminsdk-*.json
+credentials*.json
+
+# Resultados de pruebas
+test-results/
+playwright-report/
+blob-report/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log

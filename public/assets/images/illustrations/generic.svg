@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ilustración de regalo">
+  <ellipse cx="200" cy="332" rx="118" ry="15" fill="#96454d" opacity=".08"/>
+  <rect x="106" y="178" width="188" height="146" rx="18" fill="#ff9aa2"/>
+  <rect x="94" y="146" width="212" height="52" rx="16" fill="#ffb2b7"/>
+  <rect x="186" y="146" width="28" height="178" fill="#d8b4e2"/>
+  <path d="M200 146c-24-46-74-40-66-10 6 20 48 14 66 10zM200 146c24-46 74-40 66-10-6 20-48 14-66 10z" fill="#d8b4e2"/>
+  <circle cx="200" cy="146" r="14" fill="#f5d0ff"/>
+  <path d="M84 96l6 15 15 6-15 6-6 15-6-15-15-6 15-6zM318 78l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#f59e0b"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ilustración de stickers">
+  <ellipse cx="200" cy="336" rx="120" ry="15" fill="#96454d" opacity=".08"/>
+  <g transform="rotate(5 200 200)">
+    <rect x="96" y="66" width="208" height="264" rx="22" fill="#fffdf9" stroke="#f3e8f9" stroke-width="6"/>
+    <path d="M150 128c-14-20-46-6-34 18 8 15 34 30 34 30s26-15 34-30c12-24-20-38-34-18z" fill="#ff9aa2" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M250 104l11 23 25 4-18 17 4 25-22-12-22 12 4-25-18-17 25-4z" fill="#ffddb8" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M128 236c0-16 14-26 28-22 6-14 26-18 36-6 16-6 32 6 30 22 10 4 12 22-4 26h-80c-16-2-20-16-10-20z" fill="#f5d0ff" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>
+    <g stroke="#fff" stroke-width="5">
+      <path d="M262 214c18 0 30 14 26 34-4 22-22 36-26 36s-22-14-26-36c-4-20 8-34 26-34z" fill="#ff9aa2"/>
+    </g>
+    <path d="M250 210l12-12 12 12" fill="#8fd1a5" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+    <g fill="#fffdf9"><circle cx="254" cy="236" r="3"/><circle cx="270" cy="244" r="3"/><circle cx="258" cy="258" r="3"/></g>
+  </g>
+  <path d="M320 68l6 15 15 6-15 6-6 15-6-15-15-6 15-6z" fill="#f59e0b"/>
+  <path d="M74 300l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#ff9aa2"/>
+</svg>

@@ -1,0 +1,152 @@
+rules_version = '2';
+
+// Reglas de 7 Kilitos Store.
+// Principio: todo está denegado salvo lo que se concede explícitamente aquí.
+// Las operaciones comerciales (pedidos, ventas, stock, productos y roles) se
+// escriben SOLO desde Cloud Functions con el Admin SDK, que no pasa por estas
+// reglas. Por eso ningún cliente tiene permiso de escritura sobre esas colecciones.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------- Identidad y roles ----------
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function claimRole() {
+      return request.auth.token.get('role', '');
+    }
+
+    // El rol del token (custom claim, solo asignable por el servidor) debe
+    // coincidir con el espejo users/{uid}. Si un administrador revoca el rol,
+    // el acceso se corta de inmediato aunque el token aún no haya expirado.
+    function hasRole(roles) {
+      return signedIn()
+        && claimRole() in roles
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == claimRole();
+    }
+
+    function isStaff() {
+      return hasRole(['admin', 'encargado']);
+    }
+
+    function isAdmin() {
+      return hasRole(['admin']);
+    }
+
+    function optionalString(data, field, maxLength) {
+      return !(field in data) || (data[field] is string && data[field].size() <= maxLength);
+    }
+
+    // ---------- Catálogo ----------
+    match /products/{productId} {
+      // Público: solo productos publicados. El personal ve también los borradores.
+      allow read: if resource.data.active == true || isStaff();
+      allow write: if false; // saveProduct / adjustStock / createOrder (Cloud Functions)
+    }
+
+    // Costo de adquisición: privado, solo administración.
+    match /productPrivate/{productId} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    match /categories/{categoryId} {
+      allow read: if resource.data.active == true || isStaff();
+      allow create, update: if isAdmin() && validCategory(categoryId);
+      allow delete: if false; // se desactivan para no romper productos ni reportes
+    }
+
+    function validCategory(categoryId) {
+      let d = request.resource.data;
+      return categoryId.matches('^[a-z0-9-]{2,40}$')
+        && d.keys().hasOnly(['name', 'slug', 'description', 'icon', 'color', 'illustration', 'order', 'active', 'createdAt', 'updatedAt'])
+        && d.keys().hasAll(['name', 'slug', 'order', 'active', 'createdAt', 'updatedAt'])
+        && d.name is string && d.name.size() >= 2 && d.name.size() <= 40
+        && d.slug == categoryId
+        && optionalString(d, 'description', 160)
+        && (!('icon' in d) || (d.icon is string && d.icon.matches('^[a-z_]{2,40}$')))
+        && (!('color' in d) || d.color in ['rosa', 'lavanda', 'ambar', 'menta'])
+        && (!('illustration' in d) || d.illustration in ['planner', 'washi', 'stickers', 'pens', 'desk', 'generic'])
+        && d.order is int && d.order >= 0 && d.order <= 999
+        && d.active is bool
+        && d.updatedAt == request.time
+        && (resource == null ? d.createdAt == request.time : d.createdAt == resource.data.createdAt);
+    }
+
+    // ---------- Configuración pública de la tienda ----------
+    match /storeSettings/{docId} {
+      allow read: if docId == 'public';
+      allow create, update: if docId == 'public' && isAdmin() && validSettings();
+      allow delete: if false;
+    }
+
+    function validSettings() {
+      let d = request.resource.data;
+      return d.keys().hasOnly([
+          'storeName', 'tagline', 'instagram', 'contact', 'announcement', 'hero', 'highlights', 'promo',
+          'communityText', 'freeShippingThreshold', 'deliveryMethods', 'paymentMethods', 'lowStockDefault',
+          'orderHoldHours', 'demoMode', 'updatedAt', 'updatedBy'])
+        && d.storeName is string && d.storeName.size() >= 2 && d.storeName.size() <= 60
+        && optionalString(d, 'tagline', 60)
+        && (!('instagram' in d) || (d.instagram is string && d.instagram.matches('^[A-Za-z0-9._]{0,30}$')))
+        && (!('contact' in d) || (d.contact is map
+              && d.contact.keys().hasOnly(['email', 'phone', 'whatsapp', 'location'])
+              && optionalString(d.contact, 'email', 120) && optionalString(d.contact, 'phone', 30)
+              && optionalString(d.contact, 'whatsapp', 30) && optionalString(d.contact, 'location', 120)))
+        && optionalString(d, 'announcement', 160)
+        && (!('hero' in d) || (d.hero is map
+              && d.hero.keys().hasOnly(['badge', 'eyebrow', 'title', 'subtitle', 'description', 'ctaLabel', 'ctaTag'])
+              && optionalString(d.hero, 'badge', 80) && optionalString(d.hero, 'eyebrow', 80)
+              && optionalString(d.hero, 'title', 60) && optionalString(d.hero, 'subtitle', 120)
+              && optionalString(d.hero, 'description', 400) && optionalString(d.hero, 'ctaLabel', 30)
+              && optionalString(d.hero, 'ctaTag', 30)))
+        && (!('highlights' in d) || (d.highlights is list && d.highlights.size() <= 3))
+        && (!('promo' in d) || (d.promo is map && d.promo.keys().hasOnly(['badge', 'title', 'text'])
+              && optionalString(d.promo, 'badge', 60) && optionalString(d.promo, 'title', 120)
+              && optionalString(d.promo, 'text', 400)))
+        && optionalString(d, 'communityText', 300)
+        && (d.freeShippingThreshold == null
+              || (d.freeShippingThreshold is int && d.freeShippingThreshold >= 0 && d.freeShippingThreshold <= 10000000))
+        && d.deliveryMethods is list && d.deliveryMethods.size() >= 1 && d.deliveryMethods.size() <= 6
+        && d.paymentMethods is list && d.paymentMethods.size() >= 1 && d.paymentMethods.size() <= 6
+        && d.lowStockDefault is int && d.lowStockDefault >= 0 && d.lowStockDefault <= 1000
+        && d.orderHoldHours is int && d.orderHoldHours >= 0 && d.orderHoldHours <= 720
+        && d.demoMode is bool
+        && d.updatedAt == request.time
+        && d.updatedBy == request.auth.uid;
+    }
+
+    // ---------- Pedidos y ventas ----------
+    match /orders/{orderId} {
+      // Cada cliente lee solo sus propios pedidos; el personal los ve todos.
+      allow read: if isStaff() || (signedIn() && resource.data.customerUid == request.auth.uid);
+      allow write: if false; // createOrder / updateOrderStatus (Cloud Functions)
+    }
+
+    match /sales/{saleId} {
+      allow read: if isStaff();
+      allow write: if false; // historial comercial inalterable desde el navegador
+    }
+
+    match /saleCosts/{saleId} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    match /inventoryMovements/{movementId} {
+      allow read: if isStaff();
+      allow write: if false;
+    }
+
+    // ---------- Usuarios ----------
+    match /users/{uid} {
+      allow get: if signedIn() && (request.auth.uid == uid || isAdmin());
+      allow list: if isAdmin();
+      allow write: if false; // solo setUserRole o el script set-role.js
+    }
+
+    // counters, skus, rateLimits y cualquier otra colección: sin acceso de clientes.
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ilustración de accesorios de escritorio">
+  <ellipse cx="200" cy="334" rx="120" ry="15" fill="#96454d" opacity=".08"/>
+  <rect x="186" y="78" width="16" height="140" rx="8" fill="#ffddb8" transform="rotate(-10 194 148)"/>
+  <path d="M176 76l12-22 10 24z" fill="#4a3e3d" transform="rotate(-10 194 148)"/>
+  <rect x="216" y="92" width="16" height="130" rx="8" fill="#d8b4e2" transform="rotate(12 224 157)"/>
+  <rect x="240" y="104" width="16" height="118" rx="8" fill="#ff9aa2" transform="rotate(4 248 163)"/>
+  <circle cx="249" cy="102" r="12" fill="#ffb2b7" transform="rotate(4 248 163)"/>
+  <path d="M132 190h176l-14 132a20 20 0 0 1-20 18H166a20 20 0 0 1-20-18z" fill="#ff9aa2"/>
+  <path d="M132 190h176v18H132z" fill="#ffb2b7"/>
+  <circle cx="220" cy="262" r="34" fill="#ffdadb"/>
+  <ellipse cx="220" cy="272" rx="13" ry="9" fill="#ff9aa2"/>
+  <circle cx="215" cy="272" r="2.6" fill="#96454d"/><circle cx="225" cy="272" r="2.6" fill="#96454d"/>
+  <circle cx="207" cy="254" r="3" fill="#4a3e3d"/><circle cx="233" cy="254" r="3" fill="#4a3e3d"/>
+  <path d="M84 250c0-22 34-22 34 0v60H84z" fill="#d8b4e2"/>
+  <path d="M101 250c-10-26 6-46 22-50-2 18-8 34-22 50z" fill="#8fd1a5"/>
+  <path d="M320 92l6 15 15 6-15 6-6 15-6-15-15-6 15-6z" fill="#f59e0b"/>
+</svg>

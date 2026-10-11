@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ilustración de washi tapes">
+  <ellipse cx="200" cy="330" rx="130" ry="16" fill="#96454d" opacity=".08"/>
+  <path d="M232 250h120v34H232z" fill="#d8b4e2"/>
+  <g fill="#fffdf9"><circle cx="256" cy="267" r="5"/><circle cx="284" cy="267" r="5"/><circle cx="312" cy="267" r="5"/><circle cx="340" cy="267" r="5"/></g>
+  <path d="M352 250l10 8-10 9 10 8-10 9z" fill="#d8b4e2"/>
+  <circle cx="178" cy="224" r="92" fill="#d8b4e2"/>
+  <circle cx="178" cy="224" r="92" fill="url(#rollShine)"/>
+  <g fill="#fffdf9" opacity=".9"><circle cx="128" cy="190" r="7"/><circle cx="160" cy="150" r="7"/><circle cx="214" cy="152" r="7"/><circle cx="248" cy="196" r="7"/><circle cx="240" cy="262" r="7"/><circle cx="196" cy="300" r="7"/><circle cx="134" cy="282" r="7"/><circle cx="104" cy="236" r="7"/></g>
+  <circle cx="178" cy="224" r="44" fill="#fffdf9"/>
+  <circle cx="178" cy="224" r="32" fill="#f3e8f9"/>
+  <circle cx="274" cy="128" r="58" fill="#ff9aa2"/>
+  <g stroke="#fffdf9" stroke-width="6" stroke-linecap="round" opacity=".85"><path d="M240 96l16 16M262 82l16 16M286 84l14 14M234 128l14 14"/></g>
+  <circle cx="274" cy="128" r="26" fill="#fffdf9"/>
+  <circle cx="274" cy="128" r="18" fill="#ffdadb"/>
+  <path d="M90 92l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#f59e0b"/>
+  <defs><radialGradient id="rollShine" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+</svg>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed": "#3f020f", "surface-container-low": "#fff0ef", "on-background": "#231918", "surface-bright": "#fff8f7", "background": "#fff8f7", "inverse-on-surface": "#ffedeb", "surface-tint": "#96454d", "on-primary-container": "#792f38", "surface-container-high": "#f7e4e2", "outline": "#877273", "secondary-fixed": "#f8d8ff", "on-secondary-fixed-variant": "#583c63", "error-container": "#ffdad6", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-surface": "#231918", "on-tertiary-container": "#663f00", "surface-container-lowest": "#ffffff", "tertiary": "#855300", "secondary-container": "#f5d0ff", "primary": "#96454d", "primary-container": "#ff9aa2", "outline-variant": "#d9c1c1", "on-surface-variant": "#544243", "on-error": "#ffffff", "on-secondary-container": "#74567e", "on-error-container": "#93000a", "inverse-primary": "#ffb2b7", "primary-fixed-dim": "#ffb2b7", "tertiary-fixed": "#ffddb8", "tertiary-container": "#fba315", "secondary-fixed-dim": "#dfbae9", "surface-dim": "#e8d6d4", "surface-variant": "#f1dedc", "on-primary": "#ffffff", "secondary": "#71547c", "surface-container": "#fdeae8", "on-tertiary-fixed": "#2a1700", "on-tertiary-fixed-variant": "#653e00", "on-tertiary": "#ffffff", "inverse-surface": "#392e2d", "surface": "#fff8f7", "primary-fixed": "#ffdadb", "on-secondary-fixed": "#2a1135", "on-primary-fixed-variant": "#782e37", "surface-container-highest": "#f1dedc", "tertiary-fixed-dim": "#ffb95f" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "gutter": "1.25rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "margin": "2rem", "space-md": "1rem", "space-lg": "1.5rem" }, fontFamily: { "display-lg": ["Comfortaa"], "label-sm": ["Quicksand"], "headline-lg": ["Comfortaa"], "body-md": ["Quicksand"], "title-md": ["Quicksand"], "body-lg": ["Quicksand"], "display-mobile": ["Comfortaa"], "headline-md": ["Comfortaa"], "label-md": ["Quicksand"], "title-lg": ["Quicksand"] }, fontSize: { "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }], "headline-lg": ["28px", { lineHeight: "36px", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "500" }], "title-md": ["17px", { lineHeight: "24px", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "500" }], "display-mobile": ["34px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "30px", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "title-lg": ["20px", { lineHeight: "28px", fontWeight: "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_-2px_rgba(255,154,162,0.15)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-11 h-11 rounded-full bg-secondary-container/70 flex items-center justify-center text-secondary shadow-[0_2px_8px_rgba(245,208,255,0.4)]"><span class="material-symbols-outlined text-[24px]">auto_awesome</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">7 Kilitos Store</span><span class="font-label-sm text-label-sm text-secondary tracking-wider font-bold uppercase">Stationery &amp; Kawaii</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar papelería" class="w-11 h-11 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">search</span></button><a aria-label="Bolsa de compras" class="relative w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant transition-transform active:scale-95" data-path="carrito" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-0.5 -right-0.5 min-w-[20px] h-[20px] px-1 bg-tertiary-container text-on-tertiary font-label-sm text-label-sm rounded-full flex items-center justify-center shadow-sm">3</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-space-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1UuLHYlHYza0VfrESQ52QAjmZHiRzS2fHuy5V8wkT-5EofNu-Z9qAKI1xAo7sQugwbcfgqdbcMafbU7Kx54A63D-z4RQhduXjymDPMhKm19MPoCQ5gUQv3rI1xZKxxKLPUWt2G7nwGHMzCI6Le_EGMiLluDBEi-eqxCZZGaXI2w_pl9I-PiSStpsC9F_-obzhhe_52z0_0UpDYhDr3zd1AqpW9WIrWibwC3dTvt7P9kw55MCl3GDWGnYoayaOyAeZ0L-qHYtn3tfg"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Sub-header bar / Navigation controls -->
+<div class="flex items-center justify-between px-margin-mobile py-space-sm">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Volver atrás" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 shadow-sm" onclick="history.back()">
+<span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span>
+</button>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-full text-secondary font-label-sm text-label-sm">
+<span>Planners</span>
+<span class="text-outline-variant">›</span>
+<span class="text-primary font-bold">Perpetuos</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Compartir producto" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-secondary transition-all active:scale-90 shadow-sm" id="shareBtn">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button aria-label="Guardar en favoritos" class="relative w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary transition-all active:scale-95 shadow-sm" id="favBtn" onclick="toggleFav(this)">
+<span class="material-symbols-outlined text-[22px] transition-transform duration-300" id="favIcon">favorite_border</span>
+<span class="hidden absolute -top-1 -right-1 text-tertiary-container text-xs" id="favSparkle">✨</span>
+</button>
+</div>
+</div>
+<!-- Product Gallery Section -->
+<div class="px-margin-mobile flex flex-col gap-space-sm">
+<div class="relative w-full aspect-[4/4] rounded-2xl overflow-hidden bg-gradient-to-b from-surface-container-lowest to-surface-container-low shadow-[0_8px_24px_-4px_rgba(255,154,162,0.22)] flex items-center justify-center">
+<!-- Primary Main Image Display -->
+<img class="w-full h-full object-cover transition-opacity duration-300" data-alt="Charming pastel aesthetic product photo of an open pink planner with gold spiral binding, showcasing full color kawaii pig cartoon character illustrations across weekly spreads. Surrounded by holographic stickers, pastel washi tape, and cute gel pens on a cozy cream wooden desk under warm golden morning light with pastel sparkles." id="mainGalleryImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQCOm2QzzqhPJ3pLnxNTBXT4SLfOa22GGmw4wDeYmmSOGWCpA5zetTona_OwVBrNMges0ZtkWvzumcnq36gsdGyBVhPyrlPB9hAe9GUzUY9BvjmRDj6sA0Z3URdfwRcw4HrkB0wce3MmBUDN74S_RkL8ouO63K96xDM69XVaC30pE9rXehJycyXSdm2xQRSgJwApIz3SXSDiC-yWsAC6htSp80A0N4GWWR2z8sQTYn6zDQRza2sar0Tg"/>
+<!-- Top badges -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
+<div class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-tertiary font-label-sm text-label-sm shadow-sm">
+<span>✨</span>
+<span>Bestseller Edición 2026</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed/90 backdrop-blur-md text-on-primary-fixed-variant font-label-sm text-label-sm shadow-sm">
+<span>🌸</span>
+<span>100% Hecho con Amor</span>
+</div>
+</div>
+<!-- Pig Mascot Stamp Decor -->
+<div class="absolute bottom-3 right-3 w-12 h-12 rounded-full bg-surface-container-lowest/90 backdrop-blur-md p-1 shadow-md flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Cute chibi pink pig mascot sitting playfully holding a vintage brown storybook in mouth, golden circular badge with soft sparkling pastel aura, whimsical sticker style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_HDD2Npp7UzgJTu4tvTeGA2wlbFF48JwXJWEHCikpGA69c31yUineYodZxL84Osex8sNTVpkL02eA3DCzqq9svOGPZKaIuuK2a-6zhQtCDhvXSKb9r5aq_0y29r5cXUGW6FV8lVtABTFAqNqc87SWr9Q6fyfnPHuCz1o-l3983O8cGCLhlyu90bL6mn8QRGr4XEMMBQqJ_Q5POVClxnojETtacIY6Fn6_fchqc5yExsPxNMur7QlvTA"/>
+</div>
+</div>
+<!-- Gallery Thumbnails Strip -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-0.5">
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-surface-container-low p-0.5 shadow-sm transition-all scale-105 opacity-100 shadow-primary-container/40" onclick="changePhoto(0, this)">
+<img class="w-full h-full object-cover rounded-[10px]" data-alt="Closed front cover of pastel pink fluffy cushioned notebook planner with gold foiled smiling cute pig character and stars on textured cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkiyR-_iQwAToWV1uGzpyYU2PGTXn6dPOrRr8UbiQVmgTEKNaNdCMAsuUwqcu4SFMRFPZWg1TymLEZv29vQ5eAvO4mYx6rLa6cMmPueXVVMDN1OA014IMmwI97UipRozZThKRM-GeyIeDRvIj85l00XftC7kDUTvUQwgP_0g5l0UdcWRSTzs231Bw5Qu-X2jXmvY4KX0JzwsLuDTwHgptS-ofb84LU6tkiT1p3fGbjWAf-nnGFq2eEg"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-surface-container-low p-0.5 shadow-sm transition-all opacity-70 hover:opacity-100" onclick="changePhoto(1, this)">
+<img class="w-full h-full object-cover rounded-[10px]" data-alt="Detailed close up of interior pages with colorful pastel pig illustrations, weekly habit trackers, and undated scheduling sections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuI3GOSM6Laf65LBluKgGZTQU583x0IOuwcLBlqcyTYONqC8ouyKPgT7M4DsHR7VRefou1EZUvutrnj-lwFGhKqSJntFt-96EfRbR5Cw8UWSnGLVrEfXr7EkgOQmADqyGU3_HD1mRTZQdG6lUDzLYBJw5PHRfgLp_gXZfT-HZearJRafJ752xLMcmfD0de2tpA09mbjpuW6teSQkx-UWg672-XnvziayallGxosJr9CNQz5aKN0QAELg"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-surface-container-low p-0.5 shadow-sm transition-all opacity-70 hover:opacity-100" onclick="changePhoto(2, this)">
+<img class="w-full h-full object-cover rounded-[10px]" data-alt="Two sheets of cute holographic die-cut vinyl stickers featuring pigs reading books, bakery treats, milk cartons, and golden sparkles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfRMLbhS7FcfzH2_HyIMU1gfbS3NqGu_bNXt_uen5Je1ggwd5RW8ZMAj_yrMcbrV5qfOQK0LgkU7wDeQOfnVmi-RjEkHXQmYJhED50YYRtQZYiLRQX9BVmzyFM_rJdlq9AFEgGByKMLUwrM7NI0wdjEoQeN6g1esQ6A8mE4d4jtaS5QoHyMW9oNICqZptv8a_QU77rNr4hgujS3s9PvX0Z7xhJhSKUtsgQmfFiw5YpPji0ibQAlGy-AQ"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-surface-container-low p-0.5 shadow-sm transition-all opacity-70 hover:opacity-100" onclick="changePhoto(3, this)">
+<img class="w-full h-full object-cover rounded-[10px]" data-alt="Macro detail of sturdy golden wire-o twin loop binding and pink elastic band with metallic star charm ornament" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ojZBoSoO7m0A_6iFgwv2bquWMabcRUxU5_fzrXgG0bq08YJ9abbZzlSX8mwSEESbqgKkw86rT0-vKiecMVFgCezmBXny4WSZxqaOUQ4aa_hO_gEgu6v6VGAFy-kanj3dkyxFgzeZoRwqu700xFd8oR75maGjVv_TWy_5Y6_Q4PJ4wkiVtdJv3dd6Lyt5ZgJRrL8CSAurWOjZzyIBgCzAJi6Nm2tvJTDXYaCzETMtjwZS7KwP5q_WCg"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden bg-surface-container-low p-0.5 shadow-sm transition-all opacity-70 hover:opacity-100" onclick="changePhoto(4, this)">
+<img class="w-full h-full object-cover rounded-[10px]" data-alt="Unboxing experience showing the cute stationery planner wrapped in pastel lilac and pink tissue paper sealed with gold foil wax stamp, inside illustrated gift box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZxaFnz_zKQYFvdKgpKLtUrlpz44F6cn6R69zNwqdY9UzL7ae0BmjHvhsAC7ecmHZZJTw_p2zHFIyC7ywaR9aAmrDwJg9ffE8yF9r6ZsQv3Tl77llGzEJ0QEtTLu5DEoNOdDomzsoqM0wydxPsOa5BIt1hJFFpqLcxJww68roLpDC0YhLV2P3vT6EI3qTfuEgxL1WIlkI_CbokOKt604pAl1ELVsqUGmkW2N6b_5snjeJUURvmpXht8w"/>
+</button>
+</div>
+<!-- Dots pagination indicator -->
+<div class="flex justify-center items-center gap-1.5 py-1">
+<span class="w-5 h-2 rounded-full bg-primary transition-all"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-high transition-all"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-high transition-all"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-high transition-all"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-high transition-all"></span>
+</div>
+</div>
+<!-- Main Product Information & Pricing -->
+<div class="px-margin-mobile pt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary-container">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-title-md text-title-md font-bold text-on-surface">4.9</span>
+<a class="font-label-md text-label-md text-secondary underline ml-1 font-semibold" href="#opiniones">128 reseñas</a>
+</div>
+<span class="font-label-sm text-label-sm uppercase px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">Sin Fechas ✨</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-snug">
+      Planner Perpetuo "Chanchito" 2026
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      El compañero soñado para organizar tus metas, estudios y rutinas con ternura sin preocuparte por fechas vencidas. ¡Empieza en cualquier mes del año!
+    </p>
+<!-- Pricing Row -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-[0_4px_16px_rgba(255,154,162,0.1)] flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-mobile text-display-mobile text-primary font-bold">$16.900</span>
+<span class="font-title-md text-title-md text-outline line-through">$19.900 CLP</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-sm">
+          15% OFF
+        </span>
+</div>
+<!-- Payment installments badge -->
+<div class="flex items-center gap-space-xs pt-1">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]">credit_card</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">
+          Hasta <strong class="text-tertiary font-bold">3 cuotas sin interés</strong> de <strong>$5.633</strong> con Mercado Pago
+        </span>
+</div>
+</div>
+</div>
+<!-- Stock Urgency Badge -->
+<div class="px-margin-mobile pt-space-sm">
+<div class="flex items-center justify-between p-space-sm px-space-md rounded-full bg-error-container text-on-error-container shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="text-base animate-pulse">🔥</span>
+<span class="font-label-md text-label-md font-bold">¡Solo quedan 4 unidades disponibles en bodega!</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+</div>
+</div>
+<!-- Variant Selectors -->
+<div class="px-margin-mobile pt-space-md flex flex-col gap-space-md">
+<!-- Cover Design Variant -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-title-md text-title-md text-on-surface font-bold">
+          Diseño de Portada:
+        </label>
+<span class="font-label-md text-label-md text-primary font-bold" id="selectedCoverText">Rosa Algodón (Chanchito)</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<!-- Option 1 -->
+<button class="variant-btn flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all scale-102 bg-primary-fixed/30 shadow-primary/20" onclick="selectVariant(0, 'Rosa Algodón (Chanchito)', this)" type="button">
+<div class="w-full aspect-square rounded-xl bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Iconic smiling piggy illustration on candy blush pink background, kawaii stationery pastel design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpDQRlLt6ZHZEfeBd7Cx6-w84cB64kVafO4sVolfkiUVhm8UQfrz6oOIHFj1Os7IoQicFBwofbiwE15XQlcIaYW7qpxoPJze0nPJc30bRtiyWAXL0BVlibP_xy7AeXpx46KbVcW3hCZHz4D3aQjtzf1dasEpfyWUYzcxcberN7uqqcoZVd2vL6Q3iJDZdvSQVtn-m4ABUsKExlPW3Eic98jT1h2Bgs41SAT0S_wT-ykAFTB7G41h069g"/>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold text-center leading-tight">Rosa Algodón</span>
+</button>
+<!-- Option 2 -->
+<button class="variant-btn flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all" onclick="selectVariant(1, 'Lila Pastel (Sueño Estelar)', this)" type="button">
+<div class="w-full aspect-square rounded-xl bg-secondary-fixed flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Chibi pig sleeping on a crescent moon surrounded by pastel purple lavender clouds and sparkling golden stars" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5h41Ths2J_bXyfARp_ctFUyinwqyJtUDIrbIBnRLRbYkF8puqiWLwOoT6tnoWwA104CJdM-MpTUgdngpGZ23e1YNjSTuf0cbOyT7CIPhkjtoM0cwFS1Gr3AEEyll0aghL-_jbE5F79TwpnSrrBpFQ4tvs-zrMFvpyM9WyIjLB7f_zXG76Ge1M_vnoWLU8B9I9Nlx105NJtLSXHOSsC4BZCiBlkmwxQBQYHFiK4cs4LBAn3MZXitU8zg"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium text-center leading-tight">Lila Estelar</span>
+</button>
+<!-- Option 3 -->
+<button class="variant-btn flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all" onclick="selectVariant(2, 'Mantequilla Suave (Pastelería)', this)" type="button">
+<div class="w-full aspect-square rounded-xl bg-tertiary-fixed flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Sweet bakery pastel theme with cute chubby pig wearing chef hat holding strawberry cake on soft butter yellow canvas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLGSDry8YNFDO7T1GQG5wUgkqn87y-XLW9kyeYyl7UWq0GYp9qsnJilEFfjL76JBLEqRUWIN8sN_Q99z5XHNECuyYD8KDVIitrH81zXKdUvj64ChNoW4dAGh74-Z85MQHMQFDk09qX91xYsdRMsW4vZxNwuRUhSF1S---29aZs46Oz64H3UIVSvvX5g580ohJVFwHSvZwVWO--e0NPJPSM_XofA4hlCP6uuflyMH_7vGAKwFfAapQfRw"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium text-center leading-tight">Mantequilla</span>
+</button>
+</div>
+</div>
+<!-- Paper Type Variant -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-title-md text-title-md text-on-surface font-bold">
+          Tipo de Hojas:
+        </label>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">120 grs antipenetración</span>
+</div>
+<div class="flex gap-space-xs">
+<button class="paper-btn flex-1 py-2.5 px-3 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-sm" onclick="selectPaperType(this)" type="button">
+<span>✦</span>
+<span>Punteadas (Bullet)</span>
+</button>
+<button class="paper-btn flex-1 py-2.5 px-3 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md font-medium flex items-center justify-center gap-1.5 hover:bg-surface-container" onclick="selectPaperType(this)" type="button">
+<span>Líneas &amp; Cuadrícula</span>
+</button>
+</div>
+</div>
+<!-- Quantity & Add to Cart Controls -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<!-- Stepper -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-full px-2 py-1 shadow-inner h-12 w-28">
+<button aria-label="Disminuir cantidad" class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary font-bold shadow-sm active:scale-90" onclick="updateQty(-1)">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-title-md text-title-md font-bold text-on-surface" id="qtyVal">1</span>
+<button aria-label="Aumentar cantidad" class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary font-bold shadow-sm active:scale-90" onclick="updateQty(1)">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Main Action CTA Button -->
+<button class="flex-1 h-12 px-space-md rounded-full bg-gradient-to-r from-primary-container to-primary text-on-primary font-title-md text-title-md font-bold flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(255,154,162,0.45)] hover:brightness-105 active:scale-95 transition-all" id="addToCartBtn" onclick="triggerAddToCart()">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Agregar a la Bolsa</span>
+<span>✨</span>
+</button>
+</div>
+<!-- 1-Click Fast Checkout Pill -->
+<button class="w-full h-11 rounded-full bg-secondary-fixed text-on-secondary-fixed font-title-md text-title-md font-bold flex items-center justify-center gap-2 shadow-sm hover:brightness-95 active:scale-98 transition-all">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Comprar Ahora con 1 Click</span>
+</button>
+</div>
+<!-- Cute Notification Toast (Interactive floating cart confirmation) -->
+<div class="fixed top-20 inset-x-4 z-50 transform -translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="cartToast">
+<div class="bg-surface-container-lowest/95 backdrop-blur-xl rounded-2xl p-space-sm shadow-[0_12px_32px_rgba(255,154,162,0.35)] flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-title-md text-title-md font-bold text-primary truncate">¡Añadido con mucho amor! 🌸</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Planner Perpetuo Chanchito está en tu bolsa.</p>
+</div>
+<a class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm whitespace-nowrap" data-path="carrito" href="#">
+        Ver Bolsa
+      </a>
+</div>
+</div>
+<!-- Package Content & Specifications (Kawaii Accordion / Cards) -->
+<div class="px-margin-mobile pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="text-xl">🎁</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+        ¿Qué incluye tu paquete mágico?
+      </h2>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_4px_16px_rgba(255,154,162,0.12)] flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">160 páginas a todo color</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Papel bond grueso de 120g que resiste plumones, acuarelas suaves y tus tintas favoritas sin traspasar.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">2 Láminas de stickers holográficos</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Más de 45 stickers troquelados con el cerdito en situaciones tiernas, pasteles y banners de metas.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">folder_special</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Bolsillo interior doble</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Para guardar boletas, recuerdos de cafecitos, notas sueltas y tus recortes de washi tape favoritos.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">bookmark_heart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Detalles de lujo rosados</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Cinta separadora de raso, elástico rosado de alta durabilidad y un charm metálico dorado con forma de estrella.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">redeem</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Empaque de ensueño perfumado</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Caja ilustrada rígida de regalo con papel de seda, confeti suave de estrellas y aroma a frutilla dulce.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Shipping and Guarantees Bento Card -->
+<div class="px-margin-mobile pt-space-md">
+<div class="rounded-2xl bg-surface-container-low p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-tertiary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Despacho express a todo Chile</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Envíos en 24-48 hrs a Región Metropolitana y envíos rápidos a todas las regiones vía Starken / Blue Express.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">card_giftcard</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Regalito sorpresa en cada orden</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Incluimos un lapicito tinta gel o pin coleccionable cortesía de 7 Kilitos Store.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Garantía de Satisfacción 100%</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Si tu planner llega con algún detalle, te lo cambiamos inmediatamente sin costo.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Happy Customers Reviews -->
+<div class="px-margin-mobile pt-space-lg flex flex-col gap-space-sm" id="opiniones">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="text-xl">🌸</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+          Clientas Enamoradas
+        </h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">128 opiniones</span>
+</div>
+<!-- Featured Customer Review Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_6px_20px_rgba(255,154,162,0.15)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Avatar profile portrait of a smiling young woman with cute pastel hairpins holding a pink notebook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1VWpiBSgWD0ZkPTpmee-mimVoN5O4PtjTMlCjS_biKeO990BbGzg2gfo6iDSNuk5I1lP4ABLH0BybI7iVWqU4EK8APlEZHShhSogmF2sD0CovspP_a3n8bwTiRQvOXQZdavZ55HqyS1hYsMvHAb3EKG5tQXcxOk-IbRdkFjLkH190nvaujE1bWKtRrb-SwLA-18ho8Oi_wlpfBAZRzSUqy6ULwN_1mul8G1mJHu1va_YRlDTA7sY0Tw"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold leading-none">Camila Valenzuela</span>
+<div class="flex items-center gap-1 text-tertiary-container mt-1">
+<span class="text-xs">★★★★★</span>
+<span class="font-label-sm text-label-sm text-secondary">Compradora verificada</span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Hace 2 días</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        "¡Es el planner más hermoso que he tenido en mi vida! Las hojas son súper gruesas y mis plumones Zebra Mildliner no se traspasan nada. Además el aroma del paquete al abrir la caja me alegró toda la semana ✨🐷 1000/10 recomendado."
+      </p>
+<!-- Customer Photos snippet -->
+<div class="flex gap-space-xs pt-1">
+<div class="w-20 h-20 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Customer photo of open decorated kawaii planner spread with colorful washi tapes, handlettering, and cute pig stickers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAbIBuAqSK8ou6nPXG_zh9IyHYeTL76n6m77OLK6Sbqh4utyaCZt1ssUEgF8uBrlHIxmEe0ZMsR7t3k1aQP71KS89ZA5EG8EF95iMO3H-Dol1LbWMKa-YqG46WGjdRiYzuQBT2_25W504eok5y0sZZGlM9JHP8sjYD3bWQppxsbG1PLfWTXBqlKjPl4HGfoDSWid5sZqwMrPZNXKTFRBmgbKY-2p2HiRTUspInUM_Q5_us4hsULdE-1A"/>
+</div>
+<div class="w-20 h-20 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Customer photo of unboxing the 7 Kilitos Store parcel with pink tissue paper, gold foil star stickers, and lovely thank you card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSblvBB0gm5c8lToT2-DbqU_Tp0dKQFabv6mnoy4meRv78IXRIkhmZAwPUjy_6zofLEw3O_EZuDqjm4rXEI4R7XwtQ98A5lp1EbDgRN9G4dE5HJbTK5zDMoSZg8E8TJsc8w9gEcB219eCmTa2nVLryfwiPodDUncXjhz-VnYAKKFFydtpXUIxNDR_-13xRxKiEtUXDrBZuG1YXnOP7nE1Kwj9-DXSfGxCVw3UGjIkH8sHhM5KCPzR1_A"/>
+</div>
+<div class="w-20 h-20 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">photo_library</span>
+<span class="font-label-sm text-label-sm font-bold">+18 fotos</span>
+</div>
+</div>
+</div>
+<!-- Second Quick Review -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-secondary text-sm">
+            FS
+          </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold leading-tight">Francisca S.</span>
+<span class="text-xs text-amber-500">★★★★★</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Hace 5 días</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        "El detalle del elástico con la estrellita dorada es un amor. Al ser perpetuo puedo saltarme semanas de vacaciones sin desperdiciar papel. ¡Fan absoluta de 7 Kilitos!"
+      </p>
+</div>
+</div>
+<!-- Related Kawaii Goodies Suggestions Carousel -->
+<div class="px-margin-mobile pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="text-lg">✨</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+          Completa tu Set
+        </h3>
+</div>
+<a class="font-label-md text-label-md text-primary font-bold" href="#">Ver todo</a>
+</div>
+<div class="flex gap-space-sm overflow-x-auto pb-2">
+<!-- Related Item 1 -->
+<div class="flex-shrink-0 w-36 bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col gap-1.5">
+<div class="w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Set of 5 pastel gel ink pens with tiny cute pig clip figurines and quick-dry black ink" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeAG-yyvJpm5OJ5FRB-b4NCJZanu4NBDEXdmhhSzcjzq3wDx33ucDX6rosKdlzCvi3SMu4VZIV_sDLKS8cDUAENZfnX6tQ8B6XCK8Sm3-DsC__gWsLMP1liVUPEKUfFQ3dPs4mpjcgqLbN7NhJn3kdIZmMiO1BaNq_5tkl7zjkWsJtvwllwuJ51Smak2k823n-kpfnfKTRJ82quUZ6Li32esG5j2117eh8wTzP1OoMHIKWWZIO1ll1FQ"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Set Lápices Gel</span>
+<span class="font-label-md text-label-md text-primary font-bold">$4.990</span>
+<button class="w-full py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold mt-0.5 active:scale-95">
+          + Agregar
+        </button>
+</div>
+<!-- Related Item 2 -->
+<div class="flex-shrink-0 w-36 bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col gap-1.5">
+<div class="w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Set of pastel patterned washi tapes with sparkles and cute pig motifs in cylindrical dispenser" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi4VWp0NdmvJB35MzCQ1bxxP5U5-GlDCRsuRMluMvF5j9-vx5mHEzbkmSP1cots8jivCY_ySYeKDZkbD9wxy8mUnrkD5MekyiQ8OsaGcRdWjXDvNBVJLlkUKSPNuweWSFmgb3A-W-glRi475qRtCyjgmSwpWIXhkufI-ssCp-kNy98nLWUKqQzsvoTn3zUYeZsJlZt-K-PxhQl39wM_nf5abu1XvqUUlLylIA0wLUW7rePrymm3_VHNA"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Washi Tape Dúo</span>
+<span class="font-label-md text-label-md text-primary font-bold">$3.490</span>
+<button class="w-full py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold mt-0.5 active:scale-95">
+          + Agregar
+        </button>
+</div>
+<!-- Related Item 3 -->
+<div class="flex-shrink-0 w-36 bg-surface-container-lowest rounded-2xl p-2.5 shadow-sm flex flex-col gap-1.5">
+<div class="w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Cute plush fuzzy pencil case in the shape of a happy pink pig with zipper closure and soft lining" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeuJnoz6D6JeANCseIWGjjOYvZ-tWwBH8IocX01mo3D_cH-tiJPcHM_peBDktUaOc-zZjx-36YUFBOQ3s9q2tGgqwEsnASTdEso4yY3PErnCaajZz5RjGmFo_sSi76Uj88sdbAf6BuvewF1tn6_k20RN9BrIfURTLRlW7k7Hfc97sGQkKjfbHWqk2zLDaublt9iJUAAs_jSYolGY8XUEe0KLIRkYiOBavbIjwWTpcgNPWEnzuMSWec0g"/>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Estuche Peluche</span>
+<span class="font-label-md text-label-md text-primary font-bold">$7.990</span>
+<button class="w-full py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold mt-0.5 active:scale-95">
+          + Agregar
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vanilla JS Interactions for Delight & Touchpoints -->
+<script>
+  let currentQty = 1;
+  const qtyDisplay = document.getElementById('qtyVal');
+
+  function updateQty(delta) {
+    currentQty = Math.max(1, Math.min(10, currentQty + delta));
+    if (qtyDisplay) {
+      qtyDisplay.innerText = currentQty;
+    }
+  }
+
+  function selectVariant(index, name, button) {
+    const textTarget = document.getElementById('selectedCoverText');
+    if (textTarget) textTarget.innerText = name;
+
+    const allButtons = document.querySelectorAll('.variant-btn');
+    allButtons.forEach(btn => {
+      btn.classList.remove('bg-primary-fixed/30', 'shadow-primary/20', 'scale-102');
+      const label = btn.querySelector('span');
+      if (label) {
+        label.classList.remove('text-primary', 'font-bold');
+        label.classList.add('text-on-surface-variant', 'font-medium');
+      }
+    });
+
+    button.classList.add('bg-primary-fixed/30', 'shadow-primary/20', 'scale-102');
+    const activeLabel = button.querySelector('span');
+    if (activeLabel) {
+      activeLabel.classList.remove('text-on-surface-variant', 'font-medium');
+      activeLabel.classList.add('text-primary', 'font-bold');
+    }
+  }
+
+  function selectPaperType(button) {
+    const allButtons = document.querySelectorAll('.paper-btn');
+    allButtons.forEach(btn => {
+      btn.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'font-bold');
+      btn.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'font-medium');
+      const icon = btn.querySelector('span:first-child');
+      if (icon && icon.innerText === '✦') {
+        icon.remove();
+      }
+    });
+
+    button.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'font-medium');
+    button.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-bold');
+    
+    // Add sparkle prefix
+    const sparkleSpan = document.createElement('span');
+    sparkleSpan.innerText = '✦ ';
+    button.prepend(sparkleSpan);
+  }
+
+  function toggleFav(btn) {
+    const icon = document.getElementById('favIcon');
+    const sparkle = document.getElementById('favSparkle');
+    if (!icon) return;
+
+    if (icon.innerText === 'favorite_border') {
+      icon.innerText = 'favorite';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      if (sparkle) sparkle.classList.remove('hidden');
+      btn.classList.add('scale-110');
+      setTimeout(() => btn.classList.remove('scale-110'), 250);
+    } else {
+      icon.innerText = 'favorite_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      if (sparkle) sparkle.classList.add('hidden');
+    }
+  }
+
+  function changePhoto(index, thumb) {
+    const allThumbs = document.querySelectorAll('.thumb-btn');
+    allThumbs.forEach(t => {
+      t.classList.remove('scale-105', 'opacity-100', 'shadow-primary-container/40');
+      t.classList.add('opacity-70');
+    });
+
+    thumb.classList.add('scale-105', 'opacity-100', 'shadow-primary-container/40');
+    thumb.classList.remove('opacity-70');
+
+    const mainImg = document.getElementById('mainGalleryImg');
+    const thumbImg = thumb.querySelector('img');
+    if (mainImg && thumbImg) {
+      mainImg.style.opacity = '0.3';
+      setTimeout(() => {
+        mainImg.src = thumbImg.src;
+        mainImg.setAttribute('data-alt', thumbImg.getAttribute('data-alt') || '');
+        mainImg.style.opacity = '1';
+      }, 150);
+    }
+  }
+
+  function triggerAddToCart() {
+    const toast = document.getElementById('cartToast');
+    const btn = document.getElementById('addToCartBtn');
+    
+    if (btn) {
+      btn.classList.add('scale-95');
+      setTimeout(() => btn.classList.remove('scale-95'), 150);
+    }
+
+    if (toast) {
+      toast.classList.remove('-translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('-translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 3500);
+    }
+  }
+
+  // Share micro-interaction
+  const shareBtn = document.getElementById('shareBtn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: "Planner Perpetuo 'Chanchito' 2026 - 7 Kilitos Store",
+          text: "¡Mira este planner kawaii adorable con hojas 120g y stickers!",
+          url: window.location.href,
+        }).catch(() => {});
+      } else {
+        alert("Enlace copiado al portapapeles con chispitas ✨");
+      }
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_24px_-4px_rgba(255,154,162,0.2)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant transition-transform active:scale-95" data-path="inicio" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[24px]">cottage</span></div><span class="font-label-sm text-label-sm">Inicio</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant transition-transform active:scale-95" data-path="categorias" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[24px]">grid_view</span></div><span class="font-label-sm text-label-sm">Categorías</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant transition-transform active:scale-95" data-path="favoritos" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[24px]">favorite</span></div><span class="font-label-sm text-label-sm">Favoritos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant transition-transform active:scale-95" data-path="carrito" href="#"><div class="relative w-10 h-7 rounded-full flex items-center justify-center transition-colors"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute 0 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></div><span class="font-label-sm text-label-sm">Carrito</span></a></div></nav></body></html>

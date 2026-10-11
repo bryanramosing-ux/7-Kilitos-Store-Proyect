@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#ffdad6","primary-fixed-dim":"#ffb2b7","surface-dim":"#e8d6d4","secondary-fixed-dim":"#dfbae9","inverse-primary":"#ffb2b7","secondary-fixed":"#f8d8ff","tertiary-fixed-dim":"#ffb95f","secondary-container":"#f5d0ff","surface-container":"#fdeae8","on-tertiary-fixed":"#2a1700","on-secondary":"#ffffff","inverse-surface":"#392e2d","on-surface-variant":"#544243","on-secondary-fixed":"#2a1135","surface-container-highest":"#f1dedc","surface-variant":"#f1dedc","background":"#fff8f7","on-primary-fixed-variant":"#782e37","surface-container-high":"#f7e4e2","on-tertiary-fixed-variant":"#653e00","on-primary-container":"#792f38","primary-container":"#ff9aa2","outline-variant":"#d9c1c1","surface-container-low":"#fff0ef","tertiary-container":"#fba315","on-primary":"#ffffff","surface":"#fff8f7","on-secondary-fixed-variant":"#583c63","surface-container-lowest":"#ffffff","on-tertiary-container":"#663f00","secondary":"#71547c","primary":"#96454d","on-surface":"#231918","outline":"#877273","on-primary-fixed":"#3f020f","on-background":"#231918","tertiary-fixed":"#ffddb8","on-secondary-container":"#74567e","inverse-on-surface":"#ffedeb","on-error-container":"#93000a","tertiary":"#855300","error":"#ba1a1a","primary-fixed":"#ffdadb","on-error":"#ffffff","surface-bright":"#fff8f7","on-tertiary":"#ffffff","surface-tint":"#96454d"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"margin-mobile":"1rem","space-md":"1rem","space-xs":"0.25rem",margin:"2rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter-mobile":"0.75rem",gutter:"1.25rem","space-xl":"2.5rem"},fontFamily:{"headline-md":["Comfortaa"],"label-md":["Quicksand"],"body-md":["Quicksand"],"display-mobile":["Comfortaa"],"title-lg":["Quicksand"],"title-md":["Quicksand"],"display-lg":["Comfortaa"],"body-lg":["Quicksand"],"label-sm":["Quicksand"],"headline-lg":["Comfortaa"]},fontSize:{"headline-md":["22px",{lineHeight:"30px",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"500"}],"display-mobile":["34px",{lineHeight:"42px",letterSpacing:"-0.01em",fontWeight:"700"}],"title-lg":["20px",{lineHeight:"28px",fontWeight:"700"}],"title-md":["17px",{lineHeight:"24px",fontWeight:"600"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"500"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-lg":["28px",{lineHeight:"36px",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 shadow-[0_4px_20px_rgba(255,154,162,0.12)]"><div class="w-full bg-gradient-to-r from-primary-fixed via-secondary-fixed to-tertiary-fixed text-on-surface py-1.5 px-4 text-center"><div class="max-w-7xl mx-auto flex items-center justify-center gap-space-xs font-label-md text-label-md"><span class="material-symbols-outlined text-sm text-tertiary">auto_awesome</span><span class="truncate">✨ Envíos gratis en compras mayores a $45.000 | ¡Nueva colección de Planners 2026 ya disponible! 🌸</span><span class="material-symbols-outlined text-sm text-tertiary">auto_awesome</span></div></div><div class="w-full bg-surface-container-lowest/95 backdrop-blur-md"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-primary text-2xl">favorite</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-primary tracking-tight">7 Kilitos Store</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full">Kawaii Hub</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">@7kilitos.store • Papelería Bonita</span></div></div></div><div class="hidden md:flex flex-1 max-w-md mx-space-sm"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-4 text-outline pointer-events-none text-lg">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder-on-surface-variant/60 font-body-md text-body-md pl-11 pr-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar stickers, libretas, marcadores..." type="search"/><button aria-label="Búsqueda por filtro" class="absolute right-3 w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors"><span class="material-symbols-outlined text-sm">tune</span></button></div></div><div class="flex items-center gap-space-sm shrink-0"><button aria-label="Lista de deseos" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-xl">favorite_border</span></button><div class="flex items-center gap-space-xs bg-surface-container-low p-1.5 rounded-full hover:bg-surface-container-high transition-all cursor-pointer"><button aria-label="Mi Carrito de compras" class="relative w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-lg">shopping_bag</span><span class="absolute -top-1 -right-1 bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span></button><div class="hidden sm:flex flex-col pr-2 text-left"><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Carrito</span><span class="font-label-md text-label-md text-primary leading-tight font-bold">$18.500</span></div></div><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1UuLHYlHYza0VfrESQ52QAjmZHiRzS2fHuy5V8wkT-5EofNu-Z9qAKI1xAo7sQugwbcfgqdbcMafbU7Kx54A63D-z4RQhduXjymDPMhKm19MPoCQ5gUQv3rI1xZKxxKLPUWt2G7nwGHMzCI6Le_EGMiLluDBEi-eqxCZZGaXI2w_pl9I-PiSStpsC9F_-obzhhe_52z0_0UpDYhDr3zd1AqpW9WIrWibwC3dTvt7P9kw55MCl3GDWGnYoayaOyAeZ0L-qHYtn3tfg"/></div></div></div><div class="bg-surface-container-low/80 backdrop-blur-sm border-t border-surface-container"><div class="max-w-7xl mx-auto px-6 lg:px-12"><nav class="flex items-center justify-start md:justify-center gap-space-sm py-2 overflow-x-auto" data-active-classes="text-primary font-bold bg-surface-container-lowest shadow-sm rounded-full"><a aria-current="page" class="px-4 py-1.5 transition-colors whitespace-nowrap text-primary font-bold bg-surface-container-lowest shadow-sm rounded-full" data-path="inicio" href="#">Inicio</a><a class="font-label-md text-label-md px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors whitespace-nowrap" data-path="cuadernos-y-planners" href="#">Cuadernos &amp; Planners</a><a class="font-label-md text-label-md px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors whitespace-nowrap" data-path="washi-tapes-y-stickers" href="#">Washi Tapes &amp; Stickers</a><a class="font-label-md text-label-md px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors whitespace-nowrap" data-path="escritura-bonita" href="#">Escritura Bonita</a><a class="font-label-md text-label-md px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors whitespace-nowrap" data-path="ofertas-magicas" href="#">Ofertas Mágicas</a></nav></div></div></div></header><main class="w-full pt-36 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Aura -->
+<div class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low/70 via-background to-surface-container-low/40 pb-20">
+<div class="absolute -top-32 left-1/4 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-12 right-10 w-80 h-80 rounded-full bg-secondary-fixed/40 blur-3xl pointer-events-none"></div>
+<div class="absolute top-96 left-8 w-72 h-72 rounded-full bg-tertiary-fixed/30 blur-3xl pointer-events-none"></div>
+<!-- MAIN 16:9 SPLIT HERO BANNER -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 pb-14 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+<!-- LEFT: STORY & CALL TO ACTION (Columns 7) -->
+<div class="lg:col-span-7 flex flex-col items-start space-y-6">
+<!-- Sparkle Pill Badge -->
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-tertiary-container text-base animate-pulse">auto_awesome</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold tracking-wide">
+              🌸 Colección Mágica de Papelería Kawaii ✨
+            </span>
+</div>
+<!-- Main Typography Title with Soft Dreamy Shadow -->
+<div class="flex flex-col space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">
+              Bienvenida a tu rinconcito feliz
+            </span>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight leading-none drop-shadow-sm">
+              7 Kilitos Store
+            </h1>
+<p class="font-title-lg text-title-lg text-secondary font-bold">
+              Organización bonita con el chanchito más tierno 🐷✨
+            </p>
+</div>
+<!-- Description -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Papelería original japonesa y coreana, planners inspiradores diseñados con amor y detalles mágicos creados para llenar tus jornadas de ternura, calma y creatividad.
+          </p>
+<!-- Action Buttons Group -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary-container via-primary-fixed to-secondary-container text-on-primary-container font-label-md text-label-md font-bold shadow-lg shadow-primary-container/30 hover:scale-105 active:scale-95 transition-all group" href="#catalogo">
+<span class="material-symbols-outlined text-xl group-hover:rotate-12 transition-transform">shopping_bag</span>
+<span>Comprar Ahora</span>
+<span class="text-xs bg-surface-container-lowest/80 text-primary px-2.5 py-0.5 rounded-full font-bold">¡Stock Nuevo!</span>
+</a>
+<a class="inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-surface-container-lowest text-secondary font-label-md text-label-md font-bold shadow-sm hover:bg-surface-container-high transition-all" href="#colecciones">
+<span class="material-symbols-outlined text-lg text-tertiary">menu_book</span>
+<span>Ver Catálogo 2026</span>
+</a>
+</div>
+<!-- Trust Badges Bar -->
+<div class="w-full pt-4">
+<div class="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-sm shadow-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-base">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Envíos Rápidos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">A todo el país</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-on-primary-fixed">
+<span class="material-symbols-outlined text-base">redeem</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Caja Regalo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Papel seda &amp; confeti</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-base">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">100% Kawaii</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Diseños oficiales</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: OFFICIAL MASCOT DISPLAY & FLOATING CART CARD (Columns 5) -->
+<div class="lg:col-span-5 relative flex items-center justify-center">
+<!-- Outer Golden Sparkle Layer -->
+<div class="absolute -top-6 -right-6 text-tertiary-container animate-bounce">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute bottom-4 -left-6 text-primary-container animate-pulse">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+</div>
+<!-- Official Mascot Oval Card -->
+<div class="relative w-full max-w-md aspect-square rounded-full p-4 bg-gradient-to-tr from-secondary-fixed via-primary-fixed to-tertiary-fixed shadow-2xl shadow-primary-container/20 flex items-center justify-center group">
+<!-- White Inner Halo -->
+<div class="w-full h-full rounded-full bg-surface-container-lowest p-3 flex items-center justify-center overflow-hidden relative shadow-inner">
+<!-- Mascot Official Portrait Image -->
+<img class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500" data-alt="The adorable chubby pink pig mascot named Waddles sitting happily holding a vintage brown book in its mouth with soft drool, pastel blush spots on skin, circular golden braided frame background with pastel watercolor hues in pink, lilac, and butter yellow, accompanied by sparkling golden stars and the signature cute boutique logo aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy4ZP4cPB88RAAvyjG4QyNzAuKiLiSqK_pFy_2gbNQEjSHAZC124NjHitsxWE_AVKJuKFiIgJ3QRoqUu6nnRWHvsQMH_qeZGtlhO0Pkd5Y-dHLbNsns55XoBSOLd4Rg-LH2iStKNsRs1BHe0ZMTXQcuVzaSlwvyUy-Ixyb0pe4F4W-d5MnpGp3IWPJglMDH8Ju6PbFw86h8yftq9peRVi4IO8dPPWyJ10KKNNRwYyucmGIS-nJKNi5Bg"/>
+<!-- Floater: Mini Instagram Badge -->
+<div class="absolute bottom-6 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-1.5 rounded-full shadow-md flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-md text-label-md text-primary font-bold tracking-tight">@7kilitos.store</span>
+<span class="material-symbols-outlined text-sm text-tertiary-container">favorite</span>
+</div>
+</div>
+<!-- Floating Stationery Sticker Badges around the pig -->
+<div class="absolute -top-3 left-4 bg-surface-container-lowest px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 animate-bounce">
+<span class="text-sm">🎀</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">Edición 2026</span>
+</div>
+<div class="absolute -bottom-3 right-8 bg-surface-container-lowest px-4 py-2 rounded-full shadow-md flex items-center gap-2">
+<span class="text-sm">🍰</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Unboxing Mágico</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- FLOATING CART MINI MODULE (Pinned overlap) -->
+<div class="absolute -bottom-10 -right-4 lg:-bottom-12 lg:-right-6 w-72 bg-surface-container-lowest/95 backdrop-blur-md rounded-3xl p-4 shadow-xl shadow-secondary/15 flex flex-col gap-3">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">shopping_bag</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Tu Carrito</span>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">3 ítems</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-2 rounded-2xl">
+<div class="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">auto_stories</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Planner 2026 Días Felices</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">$18.500 CLP</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary font-bold text-xs shadow-sm">
+                1
+              </div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Subtotal:</span>
+<span class="font-title-md text-title-md text-primary font-bold">$36.900 CLP</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold hover:bg-secondary/90 transition-all shadow-sm flex items-center gap-1">
+<span>Pagar</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HIGHLIGHTED CATEGORY PILLS BAR -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 mt-12" id="colecciones">
+<div class="flex flex-col space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<h2 class="font-title-lg text-title-lg font-bold text-on-surface">Explora por Categoría</h2>
+</div>
+<a class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1" href="#">
+<span>Ver todas las colecciones</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<!-- Horizontal scrollable category tiles -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+<!-- Category 1 -->
+<div class="flex flex-col items-center justify-center p-5 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              📖
+            </div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Planners &amp; Agendas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">18 modelos</span>
+</div>
+<!-- Category 2 -->
+<div class="flex flex-col items-center justify-center p-5 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group text-center">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              🎀
+            </div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Washi Tapes</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">32 diseños</span>
+</div>
+<!-- Category 3 -->
+<div class="flex flex-col items-center justify-center p-5 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group text-center">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              ✨
+            </div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Stickers &amp; Deco</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">45 packs</span>
+</div>
+<!-- Category 4 -->
+<div class="flex flex-col items-center justify-center p-5 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed-dim/50 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              🖊️
+            </div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Bolígrafos Gel</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tinta pastel</span>
+</div>
+<!-- Category 5 -->
+<div class="flex flex-col items-center justify-center p-5 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer group text-center">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed-dim/50 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              🧸
+            </div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Accesorios de Escritorio</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Edición limitada</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- FEATURED PRODUCTS SHOWCASE SECTION -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-16 w-full" id="catalogo">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Favoritos del Chanchito</span>
+<span class="text-xs">💖</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Los Más Pedidos de la Semana
+        </h2>
+</div>
+<!-- Filter pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1">
+<button class="px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">
+          Todos los Destacados
+        </button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md font-bold transition-all">
+          Planners 2026
+        </button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md font-bold transition-all">
+          Kits de Regalo
+        </button>
+</div>
+</div>
+<!-- Product Grid (4 items) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="flex flex-col rounded-3xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aesthetic pastel spiral notebook planner labeled 2026 with cute pink pig stamps and cherry blossom motifs resting on a cozy wooden table with cozy morning stationery lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuDBwOISvhIGUe4_j-SVsx2HBcwh62U1nYkZ1RvXevm7ChxbEkRzpxYku7lyajbp4oMP99lKrRLbDjLTmJlMIl7UMUkP9ZBdykNFYu4H9P9pgZrtfOToy0b7bTesIhSZyPuAdmdYG6YMKW18yN-UFeDWhuZC2SfgDQywcJumdH7RmwSh4Dq_uxgVaH0snobail1VmUEZvIIAYk8BTXem7E9nI2Jl8KuMWgoKmSKgon4nLkqDyFC7vUww"/>
+<span class="absolute top-3 left-3 bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-full shadow-sm">
+            Bestseller ✨
+          </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold ml-1">5.0 (48)</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold line-clamp-1">Planner Perpetuo 'Chanchito Feliz'</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">160 páginas a todo color, stickers dorados y sobre interior.</p>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<span class="font-title-lg text-title-lg font-bold text-primary">$16.900 CLP</span>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-sm" title="Añadir">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col rounded-3xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Delicate collection of pastel rolls of washi tapes with strawberry and lavender patterns stacked neatly near cute fountain pens on a soft cream background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3MAKNZ1SaU7WlIuaX8ReVwJNCi4rCJSWuHV-TV6vhdJkoAfH8ycNvgY1Z6gjqINughr5OJjgdiHEzK-lfjJ8Hte7VlVnzTmAQAb10SoKyZD1RzFyv_yMNJXUcsyG4pndSwGabv9Cf4EY2egB9Tx4TDDvcgZHagsJsEa1cHnvk1ab6CmUJzGUm-Q9RLgSkfxHoG4oLM8KmHnub6ZsO5BHQ2tEKpb-FtM_aV3qJt18McvjDKNtVmmZ0Hg"/>
+<span class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-full shadow-sm">
+            Set x5
+          </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold ml-1">4.9 (32)</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold line-clamp-1">Set Washi Tape Sueños Rosados</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">Cintas decorativas foil dorado con temática repostería y fresas.</p>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<span class="font-title-lg text-title-lg font-bold text-primary">$8.500 CLP</span>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-sm" title="Añadir">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col rounded-3xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Pack of Korean cute metallic and waterproof stickers featuring charming pigs in cups of boba milk tea and tiny clouds with golden foil highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGKULyzUAcFxQZUFr-YHPhXHiuSj4jVWB3r62YpP8YKmFwfc2sl7akdkLY5NJZkkVixJGCm2gqvv-AbR-zjPFaRmN04KXS8--N3iApCQewNkFvYuTBO6IDoePSL7FB7xHtzIe6pzkYZToIqhmJNjnQtNPMuljQP1E8onGqAgEXYh-My3JC6WNXybcjG342gWPHgiZjBGNLldErV_f6pXsv-Pg1PdMPU8vlbbzJfMM2rBo8GdZIoYXgDw"/>
+<span class="absolute top-3 left-3 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-full shadow-sm">
+            Exclusivo
+          </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold ml-1">5.0 (64)</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold line-clamp-1">Pack Stickers Holográficos 7 Kilitos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">Láminas troqueladas resistentes al agua para termo y journal.</p>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<span class="font-title-lg text-title-lg font-bold text-primary">$4.900 CLP</span>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-sm" title="Añadir">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col rounded-3xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Set of double ended pastel soft brush pens in marshmallow shades of pink, mint, lavender, and butter yellow, laid next to a decorated journal book." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxHjMLKoHXmST6GpieiXw6XxG4YVDx4CDeyD3fJWLNN6fdZXKWQ2JSM3tzqsdvgaAMAkZxRj62cK5xWBjTtdQIrVAC9px4rAdRpQXS_xvhxqqPA8vK6zljQmd71aPdvYMoxNHrTBS1kFO1V__5Xq93InEXllG-zxeJJJu5Xfn9rUCp-qE88zfeQEQC3IUCfU08u5c2pG7HFoXe2UYWdaNMLCpL_eaSQFvV5G12Aettw2_U8OMylswi_w"/>
+<span class="absolute top-3 left-3 bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm font-bold px-2.5 py-1 rounded-full shadow-sm">
+            Tendencia
+          </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold ml-1">4.8 (21)</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold line-clamp-1">Brush Pens Pastel Doble Punta</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">Punta pincel flexible japonesa y punta fina para lettering.</p>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<span class="font-title-lg text-title-lg font-bold text-primary">$11.200 CLP</span>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-sm" title="Añadir">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BENTO PROMOTIONAL STORY STRIP -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-20 w-full">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bento 1: Unboxing Experience -->
+<div class="md:col-span-2 rounded-3xl bg-gradient-to-r from-primary-fixed/40 via-secondary-fixed/40 to-surface-container-lowest p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+<div class="flex flex-col space-y-3 max-w-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold w-fit">
+<span>✨ Experiencia 7 Kilitos</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">
+            Cada paquete se envía perfumado y con regalitos sorpresa
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Sabemos lo especial que es recibir papelería. Por eso incluimos mini washi samples, stickers de regalo y dedicatoria personalizada con cada orden.
+          </p>
+<div class="pt-2">
+<button class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1">
+<span>Conoce cómo preparamos tu pedido</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="w-36 h-36 rounded-full bg-surface-container-lowest flex items-center justify-center text-6xl shadow-md shrink-0">
+          🎁
+        </div>
+</div>
+<!-- Bento 2: Instagram Community Card -->
+<div class="rounded-3xl bg-secondary-container/40 p-8 flex flex-col justify-between shadow-sm">
+<div class="flex flex-col space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl">photo_camera</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">@7kilitos.store</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Etiquétanos en tus fotos de journal para aparecer en nuestras stories y ganar cupones mensuales de $10.000 CLP.
+          </p>
+</div>
+<div class="pt-6">
+<a class="w-full py-3 rounded-full bg-secondary text-on-secondary font-label-md text-label-md font-bold text-center block shadow-sm hover:scale-102 transition-transform" href="https://instagram.com" rel="noopener" target="_blank">
+            Seguir en Instagram
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low pt-12 pb-8 mt-auto shadow-[0_-4px_20px_rgba(255,154,162,0.06)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-xl">favorite</span><span class="font-headline-md text-headline-md text-primary">7 Kilitos Store</span></div><p class="font-body-md text-body-md text-on-surface-variant">Creando momentos de alegría, ternura y organización pastel para amantes de la papelería japonesa y coreana.</p></div><div class="flex flex-col gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Categorías Mágicas</span><span class="font-body-md text-body-md text-on-surface-variant">Planners &amp; Agendas 2026</span><span class="font-body-md text-body-md text-on-surface-variant">Stickers &amp; Sellitos</span><span class="font-body-md text-body-md text-on-surface-variant">Bolígrafos &amp; Brush Pens</span><span class="font-body-md text-body-md text-on-surface-variant">Accesorios de Escritorio</span></div><div class="flex flex-col gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Atención al Cliente</span><span class="font-body-md text-body-md text-on-surface-variant">Guía de Envíos &amp; Seguimiento</span><span class="font-body-md text-body-md text-on-surface-variant">Términos de Compra</span><span class="font-body-md text-body-md text-on-surface-variant">Preguntas Frecuentes</span><span class="font-body-md text-body-md text-on-surface-variant">Contacto &amp; Ayuda</span></div><div class="flex flex-col gap-space-sm"><span class="font-title-md text-title-md text-on-surface">Comunidad Kawaii</span><p class="font-body-md text-body-md text-on-surface-variant">Únete a @7kilitos.store para ver unboxings, regalitos especiales y tips de journaling.</p><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container"><span class="material-symbols-outlined text-sm">photo_camera</span></div><div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-sm">send</span></div><div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed"><span class="material-symbols-outlined text-sm">mail</span></div></div></div></div><div class="max-w-7xl mx-auto px-6 lg:px-12 mt-8 pt-6 border-t border-surface-container flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><p>© 2026 7 Kilitos Store. Todos los derechos reservados. Empacado con amor y destellos ✨</p><p>Diseñado con ternura para soñadores creativos</p></div></footer></body></html>

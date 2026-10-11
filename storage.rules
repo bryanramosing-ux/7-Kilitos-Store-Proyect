@@ -1,0 +1,29 @@
+rules_version = '2';
+
+// Imágenes de productos: lectura pública, escritura solo para administración.
+// Solo JPEG, PNG o WebP de hasta 3 MB. SVG queda excluido porque puede contener scripts.
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isAdmin() {
+      return request.auth != null
+        && 'role' in request.auth.token
+        && request.auth.token.role == 'admin';
+    }
+
+    match /products/{productId}/{fileName} {
+      allow read: if true;
+      // resource == null: una subida nunca reemplaza una imagen ya publicada.
+      allow create: if isAdmin()
+        && resource == null
+        && productId.matches('^[A-Za-z0-9_-]{1,64}$')
+        && fileName.matches('^[A-Za-z0-9._-]{1,120}$')
+        && request.resource.size > 0
+        && request.resource.size <= 3 * 1024 * 1024
+        && request.resource.contentType.matches('image/(jpeg|png|webp)');
+      allow update: if false;
+      allow delete: if isAdmin();
+    }
+
+    // Todo lo demás está denegado.
+  }
+}
